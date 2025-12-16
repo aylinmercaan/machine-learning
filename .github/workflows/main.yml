@@ -1,4 +1,18 @@
-content
-a b
-c
-d
+name: Python Kodu Test Robotu
+
+on: [push]  # Bu robot her 'push' işleminde uyanacak
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest  # Robot Linux (Ubuntu) kullanacak
+
+    steps:
+    - uses: actions/checkout@v3  # 1. Adım: Kodunu repodan çeker
+    
+    - name: Python Kurulumu
+      uses: actions/setup-python@v3 # 2. Adım: Python kurar
+      with:
+        python-version: "3.9"
+
+    - name: Kodu Calistir
+      run: python src/main.py # 3. Adım: Senin kodunu çalıştırır
