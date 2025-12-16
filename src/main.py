@@ -1,6 +1,6 @@
 
-def kare_al(x):
+def kup_al(x):
     return x*x*x
 
-sonuc = kare_al(5)
+sonuc = kup_al(5)
 print(sonuc)
